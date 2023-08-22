@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@300&family=Sarabun:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@300&family=Prompt:ital,wght@1,200&family=Sarabun:wght@200&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.row a {
+  padding: 10px;
   color: white;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.row img {
+  width: 150px;
+  height: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col h3 {
+  text-decoration: underline;
+}
+
+.col img {
+  width: 150px;
+  height: 100px;
+}
+
+a {
+  font-family: "Sarabun", sans-seri;
+}
+
+h4 {
+  font-family: "Sarabun", sans-seri;
+}
+
+h3 {
+  font-family: "Mitr", sans-serif;
+}
+button {
+  font-family: "Itim", cursive;
+}
+p {
+  font-family: "Itim", cursive;
+}
+
+.MyFooter {
+  background-color: rgb(222, 243, 68);
+  position: fixed;
+  bottom: 9px;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
