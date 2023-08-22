@@ -1,30 +1,43 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { Container } from "react-bootstrap";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import Contact from "./Contact";
 
-function App() {
+export function Layout() {
+  return (
+    <nav className="bg-warning p-2 mb-3 text-center">
+      <NavLink
+        to="/"
+        className="link px-2"
+        style={({ isActive }) => {
+          return {
+            textDecoration: isActive ? "none" : "underline",
+          };
+        }}
+      >
+        หน้าแรก
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className="link px-2"
+        style={({ isActive }) => {
+          return {
+            textDecoration: isActive ? "none" : "underline",
+          };
+        }}
+      >
+        ผู้จัดทำ
+      </NavLink>
+    </nav>
+  );
+}
+
+function Index() {
   return (
     <>
-      <div className="row">
-        <nav className="bg-warning p-3 mb-2 text-light">
-          <div class="link">
-            <img
-              src="pngegg.png"
-              alt="pngegg"
-              className="rounded-circle"
-              class="rounded-circle"
-            ></img>
-            <a href="*" className="col-md-1">
-              หน้าแรก
-            </a>
-            <a href="*" className="col-md-1">
-              เมนูอาหารญี่ปุ่น
-            </a>
-            <a href="Contact.js" className="col-md-1">
-              ผู้จัดทำ
-            </a>
-          </div>
-        </nav>
-      </div>
+      <Layout />
+      <div className="row"></div>
       <div className="container text-center">
         <div className="row">
           <div className="col mt-3">
@@ -98,4 +111,17 @@ function App() {
   );
 }
 
+function App() {
+  return (
+    <BrowserRouter>
+      <Container className="p-3 my-3 bg-light">
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/หน้าแรก" element={<Index />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Container>
+    </BrowserRouter>
+  );
+}
 export default App;
