@@ -7,7 +7,11 @@ function contact() {
       <Layout />
       <div>
         <center>
-          <img src="11zon_cropped (1).png" alt="received_335622548007581" />
+          <img
+            src="received_335622548007581.jpeg"
+            alt="received_335622548007581"
+            className="rounded-circle"
+          />
         </center>
       </div>
       <center>
